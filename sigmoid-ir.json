@@ -1,0 +1,17 @@
+{
+    "resourceSpecId": "abababab-abab-4aba-8aba-abababababab",
+    "stableId": "edge-waf",
+    "displayName": "Edge WAF",
+    "resourceType": "security.waf",
+    "status": "draft",
+    "inputs": {
+        "name": "edge-waf",
+        "scope": "REGIONAL",
+        "default_action": "allow"
+    },
+    "terraform": {
+        "module": {
+            "source": "../../terraform-modules/terraform-aws-waf"
+        }
+    }
+}
