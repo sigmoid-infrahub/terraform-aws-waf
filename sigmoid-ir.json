@@ -2,13 +2,21 @@
     "resourceSpecId": "abababab-abab-4aba-8aba-abababababab",
     "stableId": "edge-waf",
     "displayName": "Edge WAF",
+    "category": "security",
+    "iconUrl": "https://cdn.sigmoid.us/icons/aws/full-size/svg/security/waf.svg",
     "resourceType": "security.waf",
+    "vpcDependency": "none",
     "status": "draft",
     "inputs": {
         "name": "edge-waf",
         "scope": "REGIONAL",
         "default_action": "allow"
     },
+    "inputSpecs": [
+        { "name": "name", "type": "string", "required": true },
+        { "name": "scope", "type": "string", "required": true, "validation": { "enum": ["REGIONAL", "CLOUDFRONT"] } },
+        { "name": "default_action", "type": "string", "required": true, "validation": { "enum": ["allow", "block"] } }
+    ],
     "terraform": {
         "module": {
             "source": "../../terraform-modules/terraform-aws-waf"
