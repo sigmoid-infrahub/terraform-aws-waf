@@ -19,7 +19,8 @@
     ],
     "terraform": {
         "module": {
-            "source": "../../terraform-modules/terraform-aws-waf"
+            "source": "github.com/sigmoid-hq/terraform-aws-waf",
+            "ref": "main"
         }
     }
 }
