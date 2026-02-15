@@ -12,5 +12,11 @@
             "source": "github.com/sigmoid-hq/terraform-aws-waf",
             "ref": "main"
         }
+    },
+    "easy": {
+        "hidden": true,
+        "alias": "Web Firewall",
+        "group": "security-firewall",
+        "priority": 30
     }
 }
