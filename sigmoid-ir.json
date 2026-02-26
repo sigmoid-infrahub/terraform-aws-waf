@@ -1,7 +1,7 @@
 {
     "resourceSpecId": "abababab-abab-4aba-8aba-abababababab",
     "stableId": "edge-waf",
-    "displayName": "Edge WAF",
+    "displayName": "WAF",
     "category": "security",
     "iconUrl": "https://cdn.sigmoid.us/icons/aws/full-size/svg/security/waf.svg",
     "resourceType": "security.waf",
