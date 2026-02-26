@@ -7,3 +7,8 @@ output "web_acl_id" {
   description = "WAF Web ACL ID"
   value       = aws_wafv2_web_acl.this.id
 }
+
+output "web_acl_capacity" {
+  description = "WAF Web ACL capacity"
+  value       = aws_wafv2_web_acl.this.capacity
+}
