@@ -1,0 +1,22 @@
+{
+    "resourceSpecId": "abababab-abab-4aba-8aba-abababababab",
+    "stableId": "edge-waf",
+    "displayName": "WAF",
+    "category": "security",
+    "iconUrl": "https://cdn.sigmoid.us/icons/aws/full-size/svg/security/waf.svg",
+    "resourceType": "security.waf",
+    "vpcDependency": "none",
+    "status": "draft",
+    "terraform": {
+        "module": {
+            "source": "github.com/sigmoid-hq/terraform-aws-waf",
+            "ref": "main"
+        }
+    },
+    "easy": {
+        "hidden": true,
+        "alias": "Web Firewall",
+        "group": "security-firewall",
+        "priority": 30
+    }
+}
