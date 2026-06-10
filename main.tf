@@ -69,7 +69,7 @@ resource "aws_wafv2_web_acl" "this" {
 resource "aws_cloudwatch_log_group" "waf" {
   count = var.enable_logging ? 1 : 0
 
-  name              = "/aws/waf/${var.name}"
+  name              = "aws-waf-logs-${var.name}"
   retention_in_days = var.log_retention_in_days
   kms_key_id        = local.has_log_kms_key ? var.log_kms_key_id : null
 
