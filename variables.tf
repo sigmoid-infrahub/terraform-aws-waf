@@ -1,17 +1,32 @@
 variable "name" {
   type        = string
   description = "WAF name"
+
+  validation {
+    condition     = can(regex("^[a-zA-Z0-9_-]+$", var.name)) && length(var.name) >= 1 && length(var.name) <= 128
+    error_message = "WAF name must be 1-128 characters and contain only letters, numbers, underscores, and hyphens."
+  }
 }
 
 variable "scope" {
   type        = string
   description = "WAF scope (REGIONAL or CLOUDFRONT)"
+
+  validation {
+    condition     = contains(["REGIONAL", "CLOUDFRONT"], var.scope)
+    error_message = "Scope must be either REGIONAL or CLOUDFRONT."
+  }
 }
 
 variable "default_action" {
   type        = string
   description = "Default action"
   default     = "allow"
+
+  validation {
+    condition     = contains(["allow", "block"], var.default_action)
+    error_message = "Default action must be either allow or block."
+  }
 }
 
 variable "rules" {
